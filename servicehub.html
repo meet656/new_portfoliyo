@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiceHub — Local Service Marketplace | Meet Thakkar</title>
+    <meta name="description"
+        content="ServiceHub is a live local service marketplace for Ahmedabad that connects customers with service providers. Built by Meet Thakkar as a full-stack developer with Python, Flask, PostgreSQL and a vanilla-JavaScript PWA.">
+    <meta name="author" content="Meet Thakkar">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ServiceHub — Local Service Marketplace | Meet Thakkar">
+    <meta property="og:description"
+        content="A full-stack local service marketplace: search providers by category and area, then call, WhatsApp or send a booking request.">
+    <meta property="og:image" content="assets/servicehub/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="750">
+    <meta property="og:image:alt" content="ServiceHub home page with search and service categories">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="assets/servicehub/app-icon.png">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ServiceHub",
+        "url": "https://thels.in/",
+        "description": "A local service marketplace that connects customers with service providers and helps users discover relevant services in their area.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "image": "assets/servicehub/og-image.jpg",
+        "screenshot": "assets/servicehub/home.webp",
+        "author": {
+            "@type": "Person",
+            "name": "Meet Thakkar"
+        }
+    }
+    </script>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Devicon for technology icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="tm-page sh-page">
+    <a href="#main" class="tm-skip-link">Skip to content</a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar" aria-label="Main">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">Portfolio</a>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="index.html#cv" class="nav-link">CV</a></li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button type="button" class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-controls="nav-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero -->
+        <header class="tm-hero">
+            <div class="container">
+                <nav class="tm-breadcrumb" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Portfolio</a></li>
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li aria-current="page">ServiceHub</li>
+                    </ol>
+                </nav>
+
+                <div class="tm-hero-grid">
+                    <div class="tm-hero-text">
+                        <div class="tm-chips">
+                            <span class="tm-chip"><i class="fas fa-layer-group" aria-hidden="true"></i> Full-Stack Web Development</span>
+                            <span class="tm-status"><span class="tm-status-dot sh-status-dot" aria-hidden="true"></span> Completed &middot; Live</span>
+                        </div>
+
+                        <div class="tm-title-row">
+                            <img src="assets/servicehub/app-icon.webp" alt="ServiceHub app icon" class="tm-app-icon tm-app-icon--lg" width="84" height="84">
+                            <h1 class="tm-hero-title">ServiceHub</h1>
+                        </div>
+
+                        <p class="tm-hero-tagline">
+                            A local service marketplace that connects customers with service providers and helps
+                            users discover relevant services in their area.
+                        </p>
+                        <p class="tm-hero-meta">Python &middot; Flask &middot; PostgreSQL &middot; Vanilla JavaScript &middot; PWA</p>
+
+                        <div class="tm-actions">
+                            <a href="https://thels.in/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                <span>View Live Project</span>
+                                <span class="sh-sr-only">(opens in a new tab)</span>
+                            </a>
+                            <a href="#screenshots" class="btn btn-secondary tm-btn-ghost">
+                                <i class="fas fa-images" aria-hidden="true"></i>
+                                <span>Screenshots</span>
+                            </a>
+                            <a href="index.html#projects" class="btn btn-secondary tm-btn-ghost">
+                                <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                                <span>Back to Portfolio</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tm-hero-visual sh-hero-visual">
+                        <figure class="sh-browser">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                                <span class="sh-browser-url"><i class="fas fa-lock"></i>thels.in</span>
+                            </div>
+                            <img src="assets/servicehub/home.webp"
+                                srcset="assets/servicehub/home-sm.webp 640w, assets/servicehub/home.webp 1280w"
+                                sizes="(max-width: 968px) 92vw, 560px"
+                                alt="ServiceHub home page: Find Local Service Providers in Ahmedabad, with a search bar and service category filters"
+                                width="1280" height="800" fetchpriority="high">
+                        </figure>
+                    </div>
+                </div>
+
+                <dl class="tm-facts">
+                    <div class="tm-fact">
+                        <dt>Category</dt>
+                        <dd>Full-Stack Web</dd>
+                    </div>
+                    <div class="tm-fact">
+                        <dt>Role</dt>
+                        <dd>Full-Stack Developer</dd>
+                    </div>
+                    <div class="tm-fact">
+                        <dt>Backend</dt>
+                        <dd>Python &amp; Flask</dd>
+                    </div>
+                    <div class="tm-fact">
+                        <dt>Database</dt>
+                        <dd>PostgreSQL</dd>
+                    </div>
+                    <div class="tm-fact">
+                        <dt>Status</dt>
+                        <dd>Completed &middot; Live</dd>
+                    </div>
+                </dl>
+            </div>
+        </header>
+
+        <!-- Overview -->
+        <section class="tm-section" id="overview" aria-labelledby="overview-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="overview-title">Project Overview</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="tm-overview">
+                    <div class="tm-overview-text tm-reveal">
+                        <p>
+                            <strong>ServiceHub</strong> is a web platform for finding local service providers in
+                            Ahmedabad &mdash; electricians, plumbers, AC repair, painters, carpenters, pest control,
+                            home cleaning and tutors. Customers search and filter listings by category, locality,
+                            rating and price, then call the provider, message them on WhatsApp, or send a booking
+                            request.
+                        </p>
+                        <p>
+                            Providers sign up as Service Partners, manage their business profile and listings, and
+                            handle the bookings that come in. Admins review listings, manage users and see an audit
+                            log of sensitive actions.
+                        </p>
+                        <p>
+                            It is a single Flask application: a JSON API under <code>/api</code> that also serves a
+                            static HTML and vanilla-JavaScript frontend, installable as a Progressive Web App.
+                        </p>
+                    </div>
+
+                    <div class="tm-howto tm-reveal">
+                        <h3>Objectives</h3>
+                        <ol>
+                            <li>Make it quick to find a provider for a specific service in a specific part of the city.</li>
+                            <li>Let customers contact or book a provider directly, without a middleman.</li>
+                            <li>Give providers a free way to list their business and manage bookings.</li>
+                            <li>Show ratings and verification honestly, so listings can be trusted.</li>
+                            <li>Keep accounts secure and the platform easy to run in production.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem & solution -->
+        <section class="tm-section tm-section--alt" id="problem" aria-labelledby="problem-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="problem-title">Problem &amp; Solution</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="tm-challenges">
+                    <article class="tm-challenge tm-reveal">
+                        <h3><i class="fas fa-circle-question sh-challenge-icon" aria-hidden="true"></i>The problem</h3>
+                        <p>
+                            Finding a reliable electrician, plumber or tutor nearby usually means asking around or
+                            scrolling through scattered listings with little detail. It is hard to compare providers
+                            by area, price and rating in one place, and small local providers have few simple ways to
+                            be found online.
+                        </p>
+                    </article>
+                    <article class="tm-challenge tm-reveal">
+                        <h3><i class="fas fa-lightbulb sh-challenge-icon" aria-hidden="true"></i>The solution</h3>
+                        <p>
+                            A single directory organised by service category and city locality. Customers can browse
+                            without an account, search and filter, use their location to match the nearest area, and
+                            contact or book a provider once signed in. Providers get a free partner account with
+                            their own dashboard, and admins get the tools to keep listings accurate.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key features -->
+        <section class="tm-section" id="features" aria-labelledby="features-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="features-title">Key Features</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="tm-card-grid">
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></div>
+                        <h3>Search &amp; Filters</h3>
+                        <p>Search names, descriptions, categories and locations, and filter by category, subcategory, area, rating and price.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-location-crosshairs" aria-hidden="true"></i></div>
+                        <h3>Area-Aware Discovery</h3>
+                        <p>&ldquo;Use my location&rdquo; matches you to the nearest locality. When an area has few results, the list widens to neighbouring localities.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+                        <h3>Call, WhatsApp &amp; Booking</h3>
+                        <p>Signed-in users can call or WhatsApp a provider, or send a booking request with a preferred date, time and notes.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-star-half-stroke" aria-hidden="true"></i></div>
+                        <h3>Honest Ratings &amp; Reviews</h3>
+                        <p>Shows the site&rsquo;s own reviews, otherwise Google&rsquo;s score labelled as Google&rsquo;s, otherwise &ldquo;No ratings yet&rdquo;. One review per user per listing.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></div>
+                        <h3>Partner Dashboard</h3>
+                        <p>Providers manage a business profile and their listings, accept or decline bookings, and see their earnings and reviews.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-user-shield" aria-hidden="true"></i></div>
+                        <h3>Admin Panel</h3>
+                        <p>Overview stats, listing search and editing, deactivate and restore, user management, referrals and an audit log.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-shield-halved" aria-hidden="true"></i></div>
+                        <h3>Secure Accounts</h3>
+                        <p>Email one-time-code verification at signup, code-based password reset, and short-lived JWT sessions with rotating refresh tokens.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-mobile-screen" aria-hidden="true"></i></div>
+                        <h3>Installable PWA</h3>
+                        <p>A web app manifest and service worker make it installable, cache the app shell for fast repeat visits and show an offline fallback.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                        <h3>SEO-Ready Pages</h3>
+                        <p>Clean URLs for every listing and provider, category and area landing pages, a live sitemap.xml, robots.txt and per-page metadata.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Role -->
+        <section class="tm-section tm-section--alt" id="role" aria-labelledby="role-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="role-title">My Role &amp; Responsibilities</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Full-stack developer &mdash; backend, database, frontend, security and deployment</p>
+                </div>
+
+                <ul class="tm-contrib">
+                    <li class="tm-reveal">
+                        <i class="fas fa-server" aria-hidden="true"></i>
+                        <div>
+                            <h3>Backend API</h3>
+                            <p>Built the Flask app factory and API blueprints for auth, the public catalogue, partners, admins and metadata, with paginated JSON responses and explicit response allow-lists.</p>
+                        </div>
+                    </li>
+                    <li class="tm-reveal">
+                        <i class="fas fa-database" aria-hidden="true"></i>
+                        <div>
+                            <h3>Database &amp; migrations</h3>
+                            <p>Wrote one database layer for SQLite in development and PostgreSQL in production, with versioned SQL migrations, a per-worker connection pool and a migration script between the two.</p>
+                        </div>
+                    </li>
+                    <li class="tm-reveal">
+                        <i class="fas fa-lock" aria-hidden="true"></i>
+                        <div>
+                            <h3>Authentication &amp; security</h3>
+                            <p>Implemented bcrypt passwords, JWT access and refresh tokens with revocation, role checks on every route, email OTP flows, rate limiting and security headers.</p>
+                        </div>
+                    </li>
+                    <li class="tm-reveal">
+                        <i class="fab fa-js" aria-hidden="true"></i>
+                        <div>
+                            <h3>Frontend</h3>
+                            <p>Created the marketplace, listing details, partner and client dashboards, admin panel and account pages in HTML, CSS and vanilla JavaScript, with shared API and escaping helpers.</p>
+                        </div>
+                    </li>
+                    <li class="tm-reveal">
+                        <i class="fas fa-map-location-dot" aria-hidden="true"></i>
+                        <div>
+                            <h3>Data &amp; locations</h3>
+                            <p>Built scripts to sync listings from the Google Places API, import hand-researched providers safely, and seed Ahmedabad localities with neighbouring-area data.</p>
+                        </div>
+                    </li>
+                    <li class="tm-reveal">
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
+                        <div>
+                            <h3>SEO, testing &amp; deployment</h3>
+                            <p>Added the SEO module, an operations CLI, a pytest suite, linting and dependency audits, and a Gunicorn production setup that refuses to start with unsafe configuration.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tech stack & architecture -->
+        <section class="tm-section" id="stack" aria-labelledby="stack-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="stack-title">Technology Stack &amp; Architecture</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="tm-stack">
+                    <div class="tm-stack-group tm-reveal">
+                        <h3><i class="fab fa-python" aria-hidden="true"></i> Backend</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python 3.12</span>
+                            <span class="tech-tag">Flask 3</span>
+                            <span class="tech-tag">Flask-Limiter</span>
+                            <span class="tech-tag">PyJWT</span>
+                            <span class="tech-tag">bcrypt</span>
+                            <span class="tech-tag">Gunicorn</span>
+                        </div>
+                    </div>
+                    <div class="tm-stack-group tm-reveal">
+                        <h3><i class="fas fa-database" aria-hidden="true"></i> Database</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">psycopg 3 + pool</span>
+                            <span class="tech-tag">SQLite (dev)</span>
+                            <span class="tech-tag">SQL migrations</span>
+                        </div>
+                    </div>
+                    <div class="tm-stack-group tm-reveal">
+                        <h3><i class="fab fa-html5" aria-hidden="true"></i> Frontend</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Vanilla JavaScript</span>
+                            <span class="tech-tag">Service Worker</span>
+                            <span class="tech-tag">Web App Manifest</span>
+                        </div>
+                    </div>
+                    <div class="tm-stack-group tm-reveal">
+                        <h3><i class="fas fa-plug" aria-hidden="true"></i> Services &amp; tooling</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Google Places API</span>
+                            <span class="tech-tag">SMTP email</span>
+                            <span class="tech-tag">GTM / GA4</span>
+                            <span class="tech-tag">Nginx</span>
+                            <span class="tech-tag">pytest</span>
+                            <span class="tech-tag">Ruff</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="sh-sr-only">How a request flows through ServiceHub</h3>
+                <ol class="sh-arch">
+                    <li class="sh-arch-node tm-reveal">
+                        <h3><i class="fas fa-display" aria-hidden="true"></i> Browser</h3>
+                        <p>Static HTML pages and vanilla JavaScript call the API with <code>fetch</code>. A service worker caches the app shell.</p>
+                    </li>
+                    <li class="sh-arch-node tm-reveal">
+                        <h3><i class="fas fa-shield" aria-hidden="true"></i> Nginx</h3>
+                        <p>Terminates HTTPS in front of the application server.</p>
+                    </li>
+                    <li class="sh-arch-node tm-reveal">
+                        <h3><i class="fas fa-server" aria-hidden="true"></i> Gunicorn + Flask</h3>
+                        <p>App factory with API blueprints, JWT auth, rate limits, security headers and the SEO module. Runs pending migrations on start.</p>
+                    </li>
+                    <li class="sh-arch-node tm-reveal">
+                        <h3><i class="fas fa-database" aria-hidden="true"></i> PostgreSQL</h3>
+                        <p>Users, listings, bookings, reviews, areas and audit log, managed through versioned SQL migrations.</p>
+                    </li>
+                </ol>
+                <p class="sh-arch-note">
+                    <strong>External services:</strong> Google Places API (listing data and photos, called server-side),
+                    SMTP for one-time codes, and optional Google Tag Manager for analytics.
+                </p>
+            </div>
+        </section>
+
+        <!-- Challenges -->
+        <section class="tm-section tm-section--alt" id="challenges" aria-labelledby="challenges-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="challenges-title">Key Challenges &amp; Solutions</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="tm-challenges">
+                    <article class="tm-challenge tm-reveal">
+                        <h3>Ratings people can trust</h3>
+                        <p class="tm-challenge-problem"><span>Challenge</span> Most listings came from Google and had no reviews on the site. An audit found the early UI filled the gap with placeholder ratings and labelled every listing &ldquo;Verified&rdquo;.</p>
+                        <p class="tm-challenge-solution"><span>Solution</span> Ratings now come from real site reviews, then Google&rsquo;s score clearly labelled, then &ldquo;No ratings yet&rdquo;. The verified badge appears only after an admin verifies a listing, and a CLI command recomputes cached ratings from real reviews.</p>
+                    </article>
+                    <article class="tm-challenge tm-reveal">
+                        <h3>Secure password reset and sessions</h3>
+                        <p class="tm-challenge-problem"><span>Challenge</span> Reset links could take their host from a forwarded header, old refresh tokens kept working after a password change, and codes could be re-requested to get more guesses.</p>
+                        <p class="tm-challenge-solution"><span>Solution</span> Links are built only from the configured site URL, and production refuses to boot without one. Codes are emailed, stored as HMACs and rate limited per account, and a password change revokes every earlier token.</p>
+                    </article>
+                    <article class="tm-challenge tm-reveal">
+                        <h3>Moving from SQLite to PostgreSQL</h3>
+                        <p class="tm-challenge-problem"><span>Challenge</span> A SQLite file on a hosted server can be wiped on restart, and running a local command against the production database was too easy.</p>
+                        <p class="tm-challenge-solution"><span>Solution</span> One database layer supports both engines with separate migration sets and connection pooling. Write commands refuse a remote database unless explicitly confirmed, and a config check warns about it.</p>
+                    </article>
+                    <article class="tm-challenge tm-reveal">
+                        <h3>Thin results in some areas</h3>
+                        <p class="tm-challenge-problem"><span>Challenge</span> Coverage varies by locality, so searching a smaller area could return almost nothing.</p>
+                        <p class="tm-challenge-solution"><span>Solution</span> Localities store their neighbours. When an area has fewer than five matches, results are topped up from adjacent localities, while well-covered areas still cost a single query.</p>
+                    </article>
+                    <article class="tm-challenge tm-reveal">
+                        <h3>Stale caches after deploys</h3>
+                        <p class="tm-challenge-problem"><span>Challenge</span> The service worker could keep serving old JavaScript after an update, and one cross-origin font made the whole pre-cache fail under the site&rsquo;s strict Content Security Policy.</p>
+                        <p class="tm-challenge-solution"><span>Solution</span> The cache version is bumped with every app-shell change so returning visitors get matching files, and the web fonts are self-hosted.</p>
+                    </article>
+                    <article class="tm-challenge tm-reveal">
+                        <h3>Importing listings without duplicates</h3>
+                        <p class="tm-challenge-problem"><span>Challenge</span> Adding researched providers in bulk risked duplicate or badly categorised listings.</p>
+                        <p class="tm-challenge-solution"><span>Solution</span> The importer previews first, validates every record against the category and area lists, rejects matches by phone, email, website or name and address, backs up the database, then reads new rows back through the API.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section class="tm-section tm-section--dark" id="screenshots" aria-labelledby="screenshots-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="screenshots-title">Screenshots</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Captured from the live site &middot; select one to view it larger</p>
+                </div>
+
+                <ul class="tm-gallery sh-gallery">
+                    <li class="tm-reveal">
+                        <a href="assets/servicehub/home.webp" class="tm-shot" data-tm-shot data-caption="Home page with search, location matching and category filters">
+                            <img src="assets/servicehub/home-sm.webp" alt="ServiceHub home page with a search bar, a use-my-location button and service category filters" width="640" height="400" loading="lazy" decoding="async">
+                        </a>
+                        <p class="tm-shot-caption">Search and filter</p>
+                    </li>
+                    <li class="tm-reveal">
+                        <a href="assets/servicehub/listings.webp" class="tm-shot" data-tm-shot data-caption="Provider listings with category, address, rating source and quick actions">
+                            <img src="assets/servicehub/listings-sm.webp" alt="Grid of provider cards showing category, address, Google rating and Details, Call and More buttons" width="640" height="400" loading="lazy" decoding="async">
+                        </a>
+                        <p class="tm-shot-caption">Browse providers</p>
+                    </li>
+                    <li class="tm-reveal">
+                        <a href="assets/servicehub/detail.webp" class="tm-shot" data-tm-shot data-caption="Listing details with booking, call and WhatsApp actions">
+                            <img src="assets/servicehub/detail-sm.webp" alt="Listing details page with price, rating, and Book Service Now, Call and WhatsApp buttons" width="640" height="400" loading="lazy" decoding="async">
+                        </a>
+                        <p class="tm-shot-caption">Listing details</p>
+                    </li>
+                    <li class="tm-reveal">
+                        <a href="assets/servicehub/categories.webp" class="tm-shot" data-tm-shot data-caption="Service categories page">
+                            <img src="assets/servicehub/categories-sm.webp" alt="Service Categories page with cards for Electricians, Plumbers, AC Repair, Home Cleaning and more" width="640" height="400" loading="lazy" decoding="async">
+                        </a>
+                        <p class="tm-shot-caption">Service categories</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Closing CTA -->
+        <section class="tm-section tm-cta" aria-labelledby="cta-title">
+            <div class="container">
+                <h2 class="tm-cta-title" id="cta-title">Explore the live application</h2>
+                <p>ServiceHub is live at thels.in. I&rsquo;m happy to walk through the API, the security work or the data pipeline.</p>
+                <div class="tm-actions tm-actions--center">
+                    <a href="https://thels.in/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        <span>View Live Project</span>
+                        <span class="sh-sr-only">(opens in a new tab)</span>
+                    </a>
+                    <a href="index.html#projects" class="btn btn-secondary tm-btn-outline">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        <span>Back to Portfolio</span>
+                    </a>
+                    <a href="index.html#contact" class="btn btn-secondary tm-btn-outline">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Screenshot viewer -->
+    <dialog class="tm-lightbox" id="tm-lightbox" aria-label="Screenshot viewer">
+        <div class="tm-lightbox-inner">
+            <button type="button" class="tm-lightbox-btn tm-lightbox-close" data-tm-close aria-label="Close screenshot viewer">
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="tm-lightbox-btn tm-lightbox-prev" data-tm-prev aria-label="Previous screenshot">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <figure>
+                <img class="tm-lightbox-img" alt="" width="1280" height="800">
+                <figcaption>
+                    <span class="tm-lightbox-caption"></span>
+                    <span class="tm-lightbox-count"></span>
+                </figcaption>
+            </figure>
+            <button type="button" class="tm-lightbox-btn tm-lightbox-next" data-tm-next aria-label="Next screenshot">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </dialog>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Meet Thakkar. All rights reserved.</p>
+                <p>Designed and developed with <i class="fas fa-heart" aria-hidden="true"></i> by Meet Thakkar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button type="button" class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <!-- Shared reveal-on-scroll and screenshot lightbox -->
+    <script src="traffic-marble.js"></script>
+</body>
+
+</html>

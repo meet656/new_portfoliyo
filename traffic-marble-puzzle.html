@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Marble Puzzle — Android Puzzle Game (Flutter + Godot) | Meet Thakkar</title>
+    <meta name="description"
+        content="Traffic Marble Puzzle is a car-based, color-matching puzzle game for Android with 100 levels, built by Meet Thakkar using Flutter, Dart and the Godot engine, with Google AdMob integration.">
+    <meta name="author" content="Meet Thakkar">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Traffic Marble Puzzle — Android Puzzle Game | Meet Thakkar">
+    <meta property="og:description"
+        content="A car-based, color-matching puzzle game for Android, built with Flutter and an embedded Godot engine.">
+    <meta property="og:image" content="assets/traffic-marble/feature-graphic.jpg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta property="og:image:alt" content="Traffic Marble Puzzle title art next to the game board">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="assets/traffic-marble/app-icon.png">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Traffic Marble Puzzle",
+        "description": "A car-based, color-matching puzzle game for Android. Tap a car, match its color to a marble, and plan the order to clear the puzzle.",
+        "genre": "Puzzle",
+        "gamePlatform": "Android",
+        "operatingSystem": "Android 7.0+",
+        "applicationCategory": "GameApplication",
+        "softwareVersion": "1.0.0",
+        "image": "assets/traffic-marble/feature-graphic.jpg",
+        "screenshot": "assets/traffic-marble/gameplay.webp",
+        "author": {
+            "@type": "Person",
+            "name": "Meet Thakkar"
+        }
+    }
+    </script>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Devicon for technology icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="tm-page">
+    <a href="#main" class="tm-skip-link">Skip to content</a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar" aria-label="Main">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">Portfolio</a>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="index.html#cv" class="nav-link">CV</a></li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button type="button" class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-controls="nav-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero -->
+        <header class="tm-hero">
+            <div class="tm-marbles" aria-hidden="true">
+                <span class="tm-marble tm-marble--red"></span>
+                <span class="tm-marble tm-marble--blue"></span>
+                <span class="tm-marble tm-marble--green"></span>
+                <span class="tm-marble tm-marble--yellow"></span>
+            </div>
+            <div class="container">
+                <nav class="tm-breadcrumb" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Portfolio</a></li>
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li aria-current="page">Traffic Marble Puzzle</li>
+                    </ol>
+                </nav>
+
+                <div class="tm-hero-grid">
+                    <div class="tm-hero-text">
+                        <div class="tm-chips">
+                            <span class="tm-chip"><i class="fab fa-android" aria-hidden="true"></i> Android Game</span>
+                            <span class="tm-status"><span class="tm-status-dot" aria-hidden="true"></span> In Development</span>
+                            <span class="tm-chip">v1.0.0</span>
+                        </div>
+
+                        <div class="tm-title-row">
+                            <img src="assets/traffic-marble/app-icon.webp" alt="Traffic Marble Puzzle app icon" class="tm-app-icon tm-app-icon--lg" width="84" height="84">
+                            <h1 class="tm-hero-title">Traffic Marble Puzzle</h1>
+                        </div>
+
+                        <p class="tm-hero-tagline">
+                            Tap a car, match its color to a marble, and plan the order to clear the puzzle.
+                        </p>
+                        <p class="tm-hero-meta">Android Game Development &middot; Flutter &middot; Dart &middot; Godot Engine</p>
+
+                        <div class="tm-actions">
+                            <a href="#" class="btn btn-primary" data-tm-link="gameplayVideo" target="_blank" rel="noopener" hidden>
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                                <span>View Gameplay</span>
+                            </a>
+                            <a href="#" class="btn btn-primary" data-tm-link="apk" download hidden>
+                                <i class="fas fa-download" aria-hidden="true"></i>
+                                <span>Download APK</span>
+                            </a>
+                            <a href="#" class="btn btn-primary" data-tm-link="playStore" target="_blank" rel="noopener" hidden>
+                                <i class="fab fa-google-play" aria-hidden="true"></i>
+                                <span>Google Play Store</span>
+                            </a>
+                            <a href="#gameplay" class="btn btn-primary">
+                                <i class="fas fa-images" aria-hidden="true"></i>
+                                <span>Screenshots</span>
+                            </a>
+                            <a href="index.html#projects" class="btn btn-secondary tm-btn-ghost">
+                                <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                                <span>Back to Portfolio</span>
+                            </a>
+                        </div>
+
+                        <p class="tm-pending" id="tm-links-pending">
+                            <i class="fas fa-circle-info" aria-hidden="true"></i>
+                            The game is being prepared for its Google Play release. Store and download links
+                            will appear here once it is published.
+                        </p>
+                    </div>
+
+                    <div class="tm-hero-visual">
+                        <figure class="tm-phone tm-phone--hero">
+                            <img src="assets/traffic-marble/gameplay.webp"
+                                alt="Traffic Marble Puzzle gameplay on Level 4: colored marbles roll along the track around a grid of red, blue and green cars"
+                                width="540" height="960" fetchpriority="high">
+                        </figure>
+                    </div>
+                </div>
+
+                <dl class="tm-facts">
+                    <div class="tm-fact">
+                        <dt>Platform</dt>
+                        <dd>Android 7.0+</dd>
+                    </div>
+                    <div class="tm-fact">
+                        <dt>App</dt>
+                        <dd>Flutter &amp; Dart</dd>
+                    </div>
+                    <div class="tm-fact">
+                        <dt>Game engine</dt>
+                        <dd>Godot 4.5</dd>
+                    </div>
+                    <div class="tm-fact">
+                        <dt>Levels</dt>
+                        <dd>100 + tutorial</dd>
+                    </div>
+                    <div class="tm-fact">
+                        <dt>Status</dt>
+                        <dd>In development</dd>
+                    </div>
+                </dl>
+            </div>
+        </header>
+
+        <!-- Overview -->
+        <section class="tm-section" id="overview" aria-labelledby="overview-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="overview-title">Project Overview</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="tm-overview">
+                    <div class="tm-overview-text tm-reveal">
+                        <p>
+                            <strong>Traffic Marble Puzzle</strong> is a color-matching puzzle game about cars, marbles
+                            and getting the order right. A chain of colored marbles rolls around a track. In the middle
+                            sits a small parking grid full of cars. Tap a car and it drives off in the direction of its
+                            arrow to meet the marble chain.
+                        </p>
+                        <p>
+                            Hit a marble of the same color and it breaks. Hit the wrong color and the car comes back,
+                            costing a heart. Cars can block each other, so the order you move them in matters. Clear
+                            every car before the marbles reach the end of the track.
+                        </p>
+                        <p>
+                            The app is a single Android app where Flutter and Godot each do one job: Flutter runs the
+                            menus, level select, settings and saving, and the embedded Godot engine runs the game
+                            itself.
+                        </p>
+                    </div>
+
+                    <div class="tm-howto tm-reveal">
+                        <h3>How to play</h3>
+                        <ol>
+                            <li>Tap a car &mdash; it drives toward the marble track.</li>
+                            <li>Match it with a marble of the same color to break it.</li>
+                            <li>A wrong color sends the car back and costs one heart.</li>
+                            <li>Clear all the cars to complete the level and earn up to 3 stars.</li>
+                            <li>Lose all three hearts, or let the marbles reach the end, and it&rsquo;s game over.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key features -->
+        <section class="tm-section tm-section--alt" id="features" aria-labelledby="features-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="features-title">Key Features</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="tm-card-grid">
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fab fa-android" aria-hidden="true"></i></div>
+                        <h3>Android Mobile Game</h3>
+                        <p>Portrait, one-tap controls built for phones, with pause, music and sound switches, and haptics.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-car-side" aria-hidden="true"></i></div>
+                        <h3>Car-Based Marble Puzzles</h3>
+                        <p>Cars drive in the direction of their arrow and can block each other, so every move has to be planned.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-palette" aria-hidden="true"></i></div>
+                        <h3>Color-Matching Mechanics</h3>
+                        <p>Match each car to a marble of the same color. Every color also has its own symbol, so the game works without relying on color alone.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+                        <h3>100 Levels, Rising Difficulty</h3>
+                        <p>Hand-made levels that grow harder as you go, with a skippable tutorial, unlocks, best scores and 1&ndash;3 star ratings.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-rectangle-ad" aria-hidden="true"></i></div>
+                        <h3>Google AdMob Integration</h3>
+                        <p>Banner ads and a between-levels ad, shown only after the player gives consent through Google&rsquo;s User Messaging Platform.</p>
+                    </article>
+                    <article class="tm-card tm-reveal">
+                        <div class="skill-icon"><i class="fas fa-link" aria-hidden="true"></i></div>
+                        <h3>Flutter + Godot Integration</h3>
+                        <p>The Godot engine runs inside the Flutter app, and the two talk over a custom JSON message bridge.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Role -->
+        <section class="tm-section" id="role" aria-labelledby="role-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="role-title">My Role &amp; Technical Contributions</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Game design, gameplay programming, Android integration and release preparation</p>
+                </div>
+
+                <ul class="tm-contrib">
+                    <li class="tm-reveal">
+                        <i class="fas fa-gamepad" aria-hidden="true"></i>
+                        <div>
+                            <h3>Gameplay in Godot</h3>
+                            <p>Built the board, cars, marble chain, collision and color-matching rules, scoring, stars, hearts, tutorial, HUD and end screens in GDScript.</p>
+                        </div>
+                    </li>
+                    <li class="tm-reveal">
+                        <i class="devicon-flutter-plain" aria-hidden="true"></i>
+                        <div>
+                            <h3>App shell in Flutter</h3>
+                            <p>Created the main menu, level select with stars and locks, settings, navigation and on-device saving in Dart.</p>
+                        </div>
+                    </li>
+                    <li class="tm-reveal">
+                        <i class="fab fa-android" aria-hidden="true"></i>
+                        <div>
+                            <h3>Native Android host</h3>
+                            <p>Wrote the Kotlin host that embeds the Godot engine next to Flutter, plus a Godot plugin and MethodChannel bridge for messages in both directions.</p>
+                        </div>
+                    </li>
+                    <li class="tm-reveal">
+                        <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+                        <div>
+                            <h3>Level design</h3>
+                            <p>Designed 100 levels in a hand-edited JSON format, with automated tests where a simulated player clears every level.</p>
+                        </div>
+                    </li>
+                    <li class="tm-reveal">
+                        <i class="fas fa-rectangle-ad" aria-hidden="true"></i>
+                        <div>
+                            <h3>Monetization &amp; privacy</h3>
+                            <p>Integrated Google AdMob (banners and a between-levels ad) with a consent flow and pacing rules that keep ads out of active play.</p>
+                        </div>
+                    </li>
+                    <li class="tm-reveal">
+                        <i class="fas fa-cloud" aria-hidden="true"></i>
+                        <div>
+                            <h3>Optional cloud save</h3>
+                            <p>Added optional Google sign-in with Firebase Authentication and Cloud Firestore to keep progress across devices.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tech stack -->
+        <section class="tm-section tm-section--alt" id="stack" aria-labelledby="stack-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="stack-title">Technology Stack</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="tm-stack">
+                    <div class="tm-stack-group tm-reveal">
+                        <h3><i class="fas fa-gamepad" aria-hidden="true"></i> Game</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Godot Engine 4.5</span>
+                            <span class="tech-tag">GDScript</span>
+                            <span class="tech-tag">JSON level data</span>
+                        </div>
+                    </div>
+                    <div class="tm-stack-group tm-reveal">
+                        <h3><i class="devicon-flutter-plain" aria-hidden="true"></i> App</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">SharedPreferences</span>
+                        </div>
+                    </div>
+                    <div class="tm-stack-group tm-reveal">
+                        <h3><i class="fab fa-android" aria-hidden="true"></i> Android</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Gradle (Kotlin DSL)</span>
+                            <span class="tech-tag">MethodChannel</span>
+                        </div>
+                    </div>
+                    <div class="tm-stack-group tm-reveal">
+                        <h3><i class="fas fa-cloud" aria-hidden="true"></i> Services</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Google AdMob</span>
+                            <span class="tech-tag">User Messaging Platform</span>
+                            <span class="tech-tag">Firebase Auth</span>
+                            <span class="tech-tag">Cloud Firestore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges -->
+        <section class="tm-section" id="challenges" aria-labelledby="challenges-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="challenges-title">Key Challenges &amp; Solutions</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="tm-challenges">
+                    <article class="tm-challenge tm-reveal">
+                        <h3>Running two engines in one app</h3>
+                        <p class="tm-challenge-problem"><span>Challenge</span> Godot&rsquo;s engine can&rsquo;t be restarted once it is destroyed, and its stock activity closes the whole process when it exits.</p>
+                        <p class="tm-challenge-solution"><span>Solution</span> Hosted Godot as a fragment inside Flutter&rsquo;s activity. Leaving a level only pauses the engine, so the next level resumes almost instantly instead of cold-booting.</p>
+                    </article>
+                    <article class="tm-challenge tm-reveal">
+                        <h3>One source of truth for the rules</h3>
+                        <p class="tm-challenge-problem"><span>Challenge</span> Earlier versions had the game rules written more than once, so every fix had to be made in several places.</p>
+                        <p class="tm-challenge-solution"><span>Solution</span> Kept a single game implementation in Godot. Flutter owns menus and saving, and the two talk through a small set of JSON commands and events.</p>
+                    </article>
+                    <article class="tm-challenge tm-reveal">
+                        <h3>Messages sent before the game is ready</h3>
+                        <p class="tm-challenge-problem"><span>Challenge</span> Flutter can ask to start a level while the Godot engine is still booting.</p>
+                        <p class="tm-challenge-solution"><span>Solution</span> The native plugin queues commands and delivers them in order as soon as the game script reports that it is ready.</p>
+                    </article>
+                    <article class="tm-challenge tm-reveal">
+                        <h3>Ads that don&rsquo;t interrupt play</h3>
+                        <p class="tm-challenge-problem"><span>Challenge</span> Ads must not cover the board, shift the layout, or appear in the middle of a level.</p>
+                        <p class="tm-challenge-solution"><span>Solution</span> The banner lives in a fixed strip below the game view, and between-level ads follow pacing rules: never during a level, never after a loss, and never more than once a minute.</p>
+                    </article>
+                    <article class="tm-challenge tm-reveal">
+                        <h3>Release builds crashing on start</h3>
+                        <p class="tm-challenge-problem"><span>Challenge</span> Code shrinking (R8) removed Java classes that Godot calls by name over JNI, so the engine aborted in release builds.</p>
+                        <p class="tm-challenge-solution"><span>Solution</span> Added ProGuard keep rules for the engine&rsquo;s Java layer so release builds start reliably.</p>
+                    </article>
+                    <article class="tm-challenge tm-reveal">
+                        <h3>Keeping 100 levels solvable</h3>
+                        <p class="tm-challenge-problem"><span>Challenge</span> With 100 hand-made levels, a small data mistake could make a level impossible to finish.</p>
+                        <p class="tm-challenge-solution"><span>Solution</span> Automated Godot tests validate the level data and use a simulated player to clear every single level.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gameplay screenshots -->
+        <section class="tm-section tm-section--dark" id="gameplay" aria-labelledby="gameplay-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="gameplay-title">Gameplay Screenshots</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Select a screenshot to view it larger</p>
+                </div>
+
+                <ul class="tm-gallery">
+                    <li class="tm-reveal">
+                        <a href="assets/traffic-marble/gameplay.webp" class="tm-shot" data-tm-shot data-caption="The board: a marble chain on the track and cars on the grid">
+                            <img src="assets/traffic-marble/gameplay-sm.webp" alt="Level 4 board with a chain of colored marbles on the track and three cars on the grid" width="360" height="640" loading="lazy" decoding="async">
+                        </a>
+                        <p class="tm-shot-caption">Match the right color</p>
+                    </li>
+                    <li class="tm-reveal">
+                        <a href="assets/traffic-marble/match.webp" class="tm-shot" data-tm-shot data-caption="A green car breaks a green marble for +100 points">
+                            <img src="assets/traffic-marble/match-sm.webp" alt="A green car hits a green marble, which breaks with a +100 score popup" width="360" height="640" loading="lazy" decoding="async">
+                        </a>
+                        <p class="tm-shot-caption">Break every marble</p>
+                    </li>
+                    <li class="tm-reveal">
+                        <a href="assets/traffic-marble/puzzle.webp" class="tm-shot" data-tm-shot data-caption="Cars can block each other, so the order of moves matters">
+                            <img src="assets/traffic-marble/puzzle-sm.webp" alt="Level 5 grid with six cars pointing in different directions" width="360" height="640" loading="lazy" decoding="async">
+                        </a>
+                        <p class="tm-shot-caption">Plan your move</p>
+                    </li>
+                    <li class="tm-reveal">
+                        <a href="assets/traffic-marble/level-complete.webp" class="tm-shot" data-tm-shot data-caption="Level complete with three stars">
+                            <img src="assets/traffic-marble/level-complete-sm.webp" alt="Level Complete screen showing three stars, a score of 1000 and Next Level, Replay, Levels and Home buttons" width="360" height="640" loading="lazy" decoding="async">
+                        </a>
+                        <p class="tm-shot-caption">Complete the puzzle</p>
+                    </li>
+                    <li class="tm-reveal">
+                        <a href="assets/traffic-marble/game-over.webp" class="tm-shot" data-tm-shot data-caption="Game over when the marbles reach the end of the track">
+                            <img src="assets/traffic-marble/game-over-sm.webp" alt="Game Over screen: the marbles reached the end, with Retry, Levels and Home buttons" width="360" height="640" loading="lazy" decoding="async">
+                        </a>
+                        <p class="tm-shot-caption">Don&rsquo;t let them reach the end</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Closing CTA -->
+        <section class="tm-section tm-cta" aria-labelledby="cta-title">
+            <div class="container">
+                <h2 class="tm-cta-title" id="cta-title">Interested in this project?</h2>
+                <p>I&rsquo;m happy to walk through the code, the Flutter&ndash;Godot bridge, or the level design.</p>
+                <div class="tm-actions tm-actions--center">
+                    <a href="index.html#projects" class="btn btn-primary">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        <span>Back to Portfolio</span>
+                    </a>
+                    <a href="index.html#contact" class="btn btn-secondary tm-btn-outline">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Screenshot viewer -->
+    <dialog class="tm-lightbox" id="tm-lightbox" aria-label="Screenshot viewer">
+        <div class="tm-lightbox-inner">
+            <button type="button" class="tm-lightbox-btn tm-lightbox-close" data-tm-close aria-label="Close screenshot viewer">
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="tm-lightbox-btn tm-lightbox-prev" data-tm-prev aria-label="Previous screenshot">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <figure>
+                <img class="tm-lightbox-img" alt="" width="540" height="960">
+                <figcaption>
+                    <span class="tm-lightbox-caption"></span>
+                    <span class="tm-lightbox-count"></span>
+                </figcaption>
+            </figure>
+            <button type="button" class="tm-lightbox-btn tm-lightbox-next" data-tm-next aria-label="Next screenshot">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </dialog>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Meet Thakkar. All rights reserved.</p>
+                <p>Designed and developed with <i class="fas fa-heart" aria-hidden="true"></i> by Meet Thakkar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button type="button" class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="traffic-marble.js"></script>
+</body>
+
+</html>

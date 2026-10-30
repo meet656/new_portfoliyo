@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Meet Thakkar - Full-Stack Developer | AI Tools, Mobile Apps & Scalable Digital Products">
+    <title>Meet Thakkar | Full-Stack Developer & AI Enthusiast</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Devicon for technology icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="#home">Portfolio</a>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#cv" class="nav-link">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hello, I'm</p>
+                    <h1 class="hero-name">Meet Thakkar</h1>
+                    <h2 class="hero-role" data-roles="Full-Stack Developer|AI Enthusiast|Mobile App Developer">
+                        Full-Stack Developer</h2>
+                    <p class="hero-description">
+                        Building AI-powered tools, mobile applications, and scalable digital products.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/meet656" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/meet-thakkar-b9626b313" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:meetthakkar65006@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="profile.jpg" alt="Meet Thakkar" class="profile-image" onload="window.handleImageLoad && handleImageLoad(this);"
+                            onerror="window.handleImageError && handleImageError(this);">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" class="scroll-down" aria-label="Scroll to About section">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="profile.jpg" alt="Meet Thakkar" class="profile-image" onload="window.handleImageLoad && handleImageLoad(this);"
+                            onerror="window.handleImageError && handleImageError(this);">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Developer & Problem Solver</h3>
+                    <p>
+                        I'm a Computer Science student at Maharshi Pingal – School of Advanced Computing
+                        and Information Technology, Ahmedabad, graduating in 2026. I focus on building
+                        real-world applications that solve practical problems.
+                    </p>
+                    <p>
+                        My expertise spans full-stack web development, AI-powered tool integration,
+                        backend development with Python and Flask, and cross-platform mobile app
+                        development with Flutter. I'm passionate about integrating AI capabilities
+                        into developer tools and building scalable backend systems.
+                    </p>
+                    <p>
+                        From building an AI-powered code editor inspired by VS Code and Cursor, to
+                        creating a location-based service marketplace with Google Maps — I love
+                        turning complex ideas into useful, polished applications.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4>10+</h4>
+                            <p>Projects Built</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>6+</h4>
+                            <p>Technologies</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>2</h4>
+                            <p>Major Products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Backend development, AI integration, and automation</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Full-stack web apps, DOM manipulation, and async programming</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="devicon-flutter-plain"></i>
+                    </div>
+                    <h3>Flutter</h3>
+                    <p>Cross-platform mobile app development with Dart</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>SQLite & MySQL</h3>
+                    <p>Relational databases, queries, and data modeling</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>REST API</h3>
+                    <p>Designing and consuming RESTful web services</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Integration</h3>
+                    <p>Integrating AI models and APIs into developer tools</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>API Integration</h3>
+                    <p>Third-party API consumption, authentication, and data flow</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML & CSS</h3>
+                    <p>Semantic markup, responsive design, and modern styling</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered design, wireframing, and visual hierarchy</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java</h3>
+                    <p>Object-oriented programming and application development</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>C & C++</h3>
+                    <p>System programming and data structures</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3>PHP</h3>
+                    <p>Server-side scripting and web development</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="devicon-nodejs-plain"></i>
+                    </div>
+                    <h3>Node.js</h3>
+                    <p>Asynchronous event-driven JavaScript runtime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Featured work and recent builds</p>
+            </div>
+
+            <!-- Game Showcase: Traffic Marble Puzzle -->
+            <article class="tm-showcase" id="project-traffic-marble" aria-labelledby="tm-showcase-title">
+                <div class="tm-marbles" aria-hidden="true">
+                    <span class="tm-marble tm-marble--red"></span>
+                    <span class="tm-marble tm-marble--blue"></span>
+                    <span class="tm-marble tm-marble--green"></span>
+                    <span class="tm-marble tm-marble--yellow"></span>
+                </div>
+
+                <div class="tm-showcase-text">
+                    <div class="tm-chips">
+                        <span class="featured-badge tm-badge-static"><i class="fas fa-gamepad" aria-hidden="true"></i> Featured Game</span>
+                        <span class="tm-status"><span class="tm-status-dot" aria-hidden="true"></span> In Development</span>
+                    </div>
+
+                    <div class="tm-title-row">
+                        <img src="assets/traffic-marble/app-icon.webp" alt="" class="tm-app-icon" width="64" height="64" loading="lazy" decoding="async">
+                        <div>
+                            <h3 class="tm-title" id="tm-showcase-title">Traffic Marble Puzzle</h3>
+                            <p class="tm-subtitle">Android Game Development &middot; Flutter + Godot</p>
+                        </div>
+                    </div>
+
+                    <p class="tm-description">
+                        A color-matching puzzle game for Android. Tap a car to send it toward a chain of rolling
+                        marbles, match it with a marble of the same color, and plan the order of your moves to clear
+                        the board before the marbles reach the end. Built as one app: a Flutter shell with the
+                        Godot engine embedded for the gameplay.
+                    </p>
+
+                    <ul class="tm-feature-list">
+                        <li><i class="fab fa-android" aria-hidden="true"></i> Android mobile game</li>
+                        <li><i class="fas fa-car-side" aria-hidden="true"></i> Car-based marble puzzles</li>
+                        <li><i class="fas fa-palette" aria-hidden="true"></i> Color-matching mechanics</li>
+                        <li><i class="fas fa-layer-group" aria-hidden="true"></i> 100 levels, rising difficulty</li>
+                        <li><i class="fas fa-rectangle-ad" aria-hidden="true"></i> Google AdMob integration</li>
+                        <li><i class="fas fa-link" aria-hidden="true"></i> Flutter &amp; Godot integration</li>
+                    </ul>
+
+                    <div class="project-tech tm-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Godot Engine</span>
+                        <span class="tech-tag">GDScript</span>
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">AdMob</span>
+                    </div>
+
+                    <div class="tm-actions">
+                        <a href="traffic-marble-puzzle.html" class="btn btn-primary">
+                            <span>View Project Details</span>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a href="traffic-marble-puzzle.html#gameplay" class="btn btn-secondary tm-btn-ghost">
+                            <i class="fas fa-images" aria-hidden="true"></i>
+                            <span>Screenshots</span>
+                        </a>
+                        <a href="#" class="btn btn-secondary tm-btn-ghost" data-tm-link="playStore" target="_blank" rel="noopener" hidden>
+                            <i class="fab fa-google-play" aria-hidden="true"></i>
+                            <span>Google Play</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="traffic-marble-puzzle.html#gameplay" class="tm-phones" aria-label="View Traffic Marble Puzzle gameplay screenshots">
+                    <figure class="tm-phone tm-phone--left">
+                        <img src="assets/traffic-marble/puzzle-sm.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="tm-phone tm-phone--center">
+                        <img src="assets/traffic-marble/gameplay-sm.webp" alt="Traffic Marble Puzzle gameplay: a chain of colored marbles on the track around a grid of cars" width="360" height="640" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="tm-phone tm-phone--right">
+                        <img src="assets/traffic-marble/level-complete-sm.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
+                    </figure>
+                </a>
+            </article>
+
+            <!-- Web Showcase: ServiceHub -->
+            <article class="tm-showcase sh-showcase" id="project-servicehub" aria-labelledby="sh-showcase-title">
+                <div class="tm-showcase-text">
+                    <div class="tm-chips">
+                        <span class="featured-badge tm-badge-static"><i class="fas fa-star" aria-hidden="true"></i> Featured Project</span>
+                        <span class="tm-status"><span class="tm-status-dot sh-status-dot" aria-hidden="true"></span> Completed &middot; Live</span>
+                    </div>
+
+                    <div class="tm-title-row">
+                        <img src="assets/servicehub/app-icon.webp" alt="" class="tm-app-icon" width="64" height="64" loading="lazy" decoding="async">
+                        <div>
+                            <h3 class="tm-title" id="sh-showcase-title">ServiceHub</h3>
+                            <p class="tm-subtitle">Full-Stack Web Development &middot; Local Service Marketplace</p>
+                        </div>
+                    </div>
+
+                    <p class="tm-description">
+                        A local service marketplace that connects customers with service providers and helps users
+                        discover relevant services in their area. Built end to end as a Flask JSON API with an
+                        installable vanilla-JavaScript web app, live for Ahmedabad.
+                    </p>
+
+                    <ul class="sh-meta">
+                        <li><i class="fas fa-user-gear" aria-hidden="true"></i>Role: <strong>Full-Stack Developer</strong></li>
+                        <li><i class="fas fa-circle-check" aria-hidden="true"></i>Status: <strong>Completed / Live</strong></li>
+                    </ul>
+
+                    <ul class="tm-feature-list">
+                        <li><i class="fas fa-magnifying-glass" aria-hidden="true"></i> Search by category, area &amp; price</li>
+                        <li><i class="fas fa-location-crosshairs" aria-hidden="true"></i> Location-aware area matching</li>
+                        <li><i class="fab fa-whatsapp" aria-hidden="true"></i> Call, WhatsApp &amp; booking requests</li>
+                        <li><i class="fas fa-users-gear" aria-hidden="true"></i> Client, partner &amp; admin roles</li>
+                        <li><i class="fas fa-shield-halved" aria-hidden="true"></i> Email OTP &amp; JWT security</li>
+                        <li><i class="fas fa-mobile-screen" aria-hidden="true"></i> Installable PWA &amp; SEO pages</li>
+                    </ul>
+
+                    <div class="project-tech tm-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">PWA</span>
+                        <span class="tech-tag">Google Places API</span>
+                        <span class="tech-tag">Gunicorn</span>
+                    </div>
+
+                    <div class="tm-actions">
+                        <a href="https://thels.in/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <span>View Live Project</span>
+                            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            <span class="sh-sr-only">(opens in a new tab)</span>
+                        </a>
+                        <a href="servicehub.html" class="btn btn-secondary tm-btn-ghost">
+                            <span>View Details</span>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="servicehub.html#screenshots" class="sh-visual" aria-label="View ServiceHub screenshots">
+                    <figure class="sh-browser sh-browser--main">
+                        <div class="sh-browser-bar" aria-hidden="true">
+                            <span class="sh-dot sh-dot--red"></span>
+                            <span class="sh-dot sh-dot--yellow"></span>
+                            <span class="sh-dot sh-dot--green"></span>
+                            <span class="sh-browser-url"><i class="fas fa-lock"></i>thels.in</span>
+                        </div>
+                        <img src="assets/servicehub/home-sm.webp"
+                            srcset="assets/servicehub/home-sm.webp 640w, assets/servicehub/home.webp 1280w"
+                            sizes="(max-width: 968px) 90vw, 560px"
+                            alt="ServiceHub home page: Find Local Service Providers in Ahmedabad, with a search bar and service category filters"
+                            width="1280" height="800" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="sh-browser sh-browser--float" aria-hidden="true">
+                        <div class="sh-browser-bar">
+                            <span class="sh-dot sh-dot--red"></span>
+                            <span class="sh-dot sh-dot--yellow"></span>
+                            <span class="sh-dot sh-dot--green"></span>
+                        </div>
+                        <img src="assets/servicehub/detail-sm.webp" alt="" width="640" height="400" loading="lazy" decoding="async">
+                    </figure>
+                </a>
+            </article>
+
+            <!-- Featured Projects -->
+            <div class="featured-projects">
+                <!-- AI-Powered Code Editor -->
+                <div class="project-card featured" id="project-ai-editor">
+                    <div class="featured-badge"><i class="fas fa-star"></i> Featured Project</div>
+                    <div class="project-status"><i class="fas fa-circle-check" aria-hidden="true"></i> Completed</div>
+                    <div class="project-image project-image--shot">
+                        <div class="project-overlay">
+
+                        </div>
+                        <div class="project-placeholder"><i class="fas fa-laptop-code"></i></div>
+                        <figure class="sh-browser project-shot">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                            </div>
+                            <img src="assets/projects/ai-code-editor-sm.webp"
+                                srcset="assets/projects/ai-code-editor-sm.webp 640w, assets/projects/ai-code-editor.webp 1280w"
+                                sizes="(max-width: 768px) 90vw, 760px"
+                                alt="Illustrative preview of the AI-Powered Code Editor: file explorer, tabs, a live code diff, a terminal, and an AI chat panel with an Apply button"
+                                width="1280" height="800" loading="lazy" decoding="async">
+                        </figure>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-Powered Code Editor</h3>
+                        <p class="project-subtitle">VS Code + Cursor AI Inspired</p>
+                        <p>Built a hybrid AI-powered code editor with File Explorer, Folder Management, Drag &amp; Drop,
+                            Tabs System, Terminal Panel, Monaco Editor integration, AI Chat Assistant, Auto Apply AI
+                            Code, Live Code Diff, Selected Code Replace, Save + Auto Save, Theme Switching, and Settings
+                            System.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Monaco Editor</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">API Integration</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Projects -->
+            <h3 class="projects-divider">Other Projects</h3>
+            <div class="projects-grid">
+                <!-- Meet Marketing Financial Loan Platform -->
+                <div class="project-card mm-card" id="project-meet-marketing">
+                    <div class="project-image mm-preview">
+                        <span class="project-status"><span class="tm-status-dot sh-status-dot" aria-hidden="true"></span> Live Project</span>
+                        <figure class="sh-browser mm-browser--main">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                                <span class="sh-browser-url"><i class="fas fa-lock"></i>netlify.app</span>
+                            </div>
+                            <img src="assets/meet-marketing/home-sm.webp"
+                                srcset="assets/meet-marketing/home-sm.webp 640w, assets/meet-marketing/home.webp 1280w"
+                                sizes="(max-width: 768px) 90vw, 360px"
+                                alt="Meet Marketing home page: Trusted Financial Expertise hero with Check Eligibility and Contact Us buttons"
+                                width="1280" height="800" loading="lazy" decoding="async">
+                        </figure>
+                        <figure class="sh-browser mm-browser--float">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                            </div>
+                            <img src="assets/meet-marketing/calculator-sm.webp"
+                                alt="Loan amount calculator result panel showing estimated EMI and estimated loan amount"
+                                width="480" height="360" loading="lazy" decoding="async">
+                        </figure>
+                    </div>
+                    <div class="project-content">
+                        <h3>Meet Marketing Financial Platform</h3>
+                        <p class="project-subtitle">Loan Eligibility &amp; EMI Planning</p>
+                        <p>A modern financial consultancy platform featuring dynamic loan eligibility calculators, EMI
+                            estimation tools, and a local storage inquiry system, designed to deliver a smooth and
+                            user-friendly financial planning experience.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Tailwind CSS</span><span class="tech-tag">JavaScript</span><span class="tech-tag">HTML/CSS</span><span class="tech-tag">LocalStorage</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://transcendent-semifreddo-6d7974.netlify.app/" target="_blank" rel="noopener noreferrer"
+                                class="btn-project btn-demo" aria-label="Live Demo of Meet Marketing Financial Platform (opens in a new tab)">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Online Attendance Management System -->
+                <div class="project-card">
+                    <div class="project-image project-image--shot">
+                        <div class="project-overlay">
+
+                        </div>
+                        <div class="project-placeholder"><i class="fas fa-clipboard-list"></i></div>
+                        <figure class="sh-browser project-shot">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                            </div>
+                            <img src="assets/projects/attendance-management-sm.webp"
+                                srcset="assets/projects/attendance-management-sm.webp 640w, assets/projects/attendance-management.webp 1280w"
+                                sizes="(max-width: 768px) 90vw, 360px"
+                                alt="Illustrative preview of the attendance app: a faculty view marking students present or absent, with monthly and weekly attendance analytics"
+                                width="1280" height="800" loading="lazy" decoding="async">
+                        </figure>
+                    </div>
+                    <div class="project-content">
+                        <h3>Online Attendance Management</h3>
+                        <p>A cross-platform Flutter application for faculty to manage digital attendance with role-based
+                            access, local storage, and student analytics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span><span class="tech-tag">Dart</span><span
+                                class="tech-tag">SharedPrefs</span><span class="tech-tag">Material UI</span>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Ticket Management System -->
+                <div class="project-card">
+                    <div class="project-image project-image--shot">
+
+                        <div class="project-placeholder"><i class="fas fa-ticket-alt"></i></div>
+                        <figure class="sh-browser project-shot">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                            </div>
+                            <img src="assets/projects/ticket-management-sm.webp"
+                                srcset="assets/projects/ticket-management-sm.webp 640w, assets/projects/ticket-management.webp 1280w"
+                                sizes="(max-width: 768px) 90vw, 360px"
+                                alt="Illustrative preview of the ticket dashboard: ticket search, status filters, and a ticket list tagged High, Medium, or Low priority"
+                                width="1280" height="800" loading="lazy" decoding="async">
+                        </figure>
+                    </div>
+                    <div class="project-content">
+                        <h3>Ticket Management System</h3>
+                        <p>A responsive ticket management system with priority tagging, search and filter functionality.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span
+                                class="tech-tag">JavaScript</span><span class="tech-tag">PHP</span><span
+                                class="tech-tag">MySQL</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Student Management System -->
+                <div class="project-card">
+                    <div class="project-image project-image--shot">
+                        <div class="project-overlay">
+
+                        </div>
+                        <div class="project-placeholder"><i class="fas fa-user-graduate"></i></div>
+                        <figure class="sh-browser project-shot">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                            </div>
+                            <img src="assets/projects/student-management-sm.webp"
+                                srcset="assets/projects/student-management-sm.webp 640w, assets/projects/student-management.webp 1280w"
+                                sizes="(max-width: 768px) 90vw, 360px"
+                                alt="Illustrative preview of the student management admin panel: student records with course, attendance, and grade, plus a student profile"
+                                width="1280" height="800" loading="lazy" decoding="async">
+                        </figure>
+                    </div>
+                    <div class="project-content">
+                        <h3>Student Management System</h3>
+                        <p>A complete system to manage students, courses, attendance, and grades with role-based access.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span
+                                class="tech-tag">JavaScript</span><span class="tech-tag">PHP</span><span
+                                class="tech-tag">MySQL</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Online Exam System -->
+                <div class="project-card">
+                    <div class="project-image project-image--shot">
+                        <div class="project-overlay">
+
+                        </div>
+                        <div class="project-placeholder"><i class="fas fa-clipboard-check"></i></div>
+                        <figure class="sh-browser project-shot">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                            </div>
+                            <img src="assets/projects/online-exam-sm.webp"
+                                srcset="assets/projects/online-exam-sm.webp 640w, assets/projects/online-exam.webp 1280w"
+                                sizes="(max-width: 768px) 90vw, 360px"
+                                alt="Illustrative preview of the online exam: a timed multiple-choice question with a question palette and a Submit Exam button"
+                                width="1280" height="800" loading="lazy" decoding="async">
+                        </figure>
+                    </div>
+                    <div class="project-content">
+                        <h3>Online Exam Management System</h3>
+                        <p>Web-based platform for creating and conducting online exams with timed tests and auto
+                            grading.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span
+                                class="tech-tag">JavaScript</span><span class="tech-tag">PHP</span><span
+                                class="tech-tag">MySQL</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TO-DO List -->
+                <div class="project-card">
+                    <div class="project-image project-image--shot">
+                        <div class="project-overlay">
+
+                        </div>
+                        <div class="project-placeholder"><i class="fas fa-tasks"></i></div>
+                        <figure class="sh-browser project-shot">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                            </div>
+                            <img src="assets/projects/todo-list-sm.webp"
+                                srcset="assets/projects/todo-list-sm.webp 640w, assets/projects/todo-list.webp 1280w"
+                                sizes="(max-width: 768px) 90vw, 360px"
+                                alt="Illustrative preview of the to-do app: adding a task, editing one in place, and completed tasks checked off with a progress bar"
+                                width="1280" height="800" loading="lazy" decoding="async">
+                        </figure>
+                    </div>
+                    <div class="project-content">
+                        <h3>TO-DO List Application</h3>
+                        <p>A fully functional task manager with adding, editing, deleting, and marking tasks as
+                            complete.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span
+                                class="tech-tag">JavaScript</span><span class="tech-tag">PHP</span><span
+                                class="tech-tag">MySQL</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Portfolio Website -->
+                <div class="project-card">
+                    <div class="project-image project-image--shot">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Project"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder"><i class="fas fa-briefcase"></i></div>
+                        <figure class="sh-browser project-shot">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                            </div>
+                            <img src="assets/projects/portfolio-website-sm.webp"
+                                srcset="assets/projects/portfolio-website-sm.webp 640w, assets/projects/portfolio-website.webp 1280w"
+                                sizes="(max-width: 768px) 90vw, 360px"
+                                alt="Screenshot of this portfolio's home page: hero section with name, role, call-to-action buttons, and profile photo"
+                                width="1280" height="800" loading="lazy" decoding="async">
+                        </figure>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Personal portfolio with responsive layout, modern design, and smooth animations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span
+                                class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tic-Tac-Toe -->
+                <div class="project-card">
+                    <div class="project-image project-image--shot">
+                        <div class="project-overlay">
+
+                        </div>
+                        <div class="project-placeholder"><i class="fas fa-dice"></i></div>
+                        <figure class="sh-browser project-shot">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                            </div>
+                            <img src="assets/projects/tic-tac-toe-sm.webp"
+                                srcset="assets/projects/tic-tac-toe-sm.webp 640w, assets/projects/tic-tac-toe.webp 1280w"
+                                sizes="(max-width: 768px) 90vw, 360px"
+                                alt="Illustrative preview of Tic-Tac-Toe: a finished board where X wins diagonally, with the score for X, O, and draws"
+                                width="1280" height="800" loading="lazy" decoding="async">
+                        </figure>
+                    </div>
+                    <div class="project-content">
+                        <h3>Tic-Tac-Toe Game</h3>
+                        <p>Classic Tic-Tac-Toe with interactive gameplay and game state tracking.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span
+                                class="tech-tag">JavaScript</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Memory Match -->
+                <div class="project-card">
+                    <div class="project-image project-image--shot">
+                        <div class="project-overlay">
+
+                        </div>
+                        <div class="project-placeholder"><i class="fas fa-puzzle-piece"></i></div>
+                        <figure class="sh-browser project-shot">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                            </div>
+                            <img src="assets/projects/memory-match-sm.webp"
+                                srcset="assets/projects/memory-match-sm.webp 640w, assets/projects/memory-match.webp 1280w"
+                                sizes="(max-width: 768px) 90vw, 360px"
+                                alt="Illustrative preview of Memory Match: a grid of face-down and matched cards with moves, matches, and time"
+                                width="1280" height="800" loading="lazy" decoding="async">
+                        </figure>
+                    </div>
+                    <div class="project-content">
+                        <h3>Memory Match Game</h3>
+                        <p>A fun memory matching game with CSS animations and score tracking.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span
+                                class="tech-tag">JavaScript</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Snake Game -->
+                <div class="project-card">
+                    <div class="project-image project-image--shot">
+                        <div class="project-overlay">
+
+                        </div>
+                        <div class="project-placeholder"><i class="fas fa-gamepad"></i></div>
+                        <figure class="sh-browser project-shot">
+                            <div class="sh-browser-bar" aria-hidden="true">
+                                <span class="sh-dot sh-dot--red"></span>
+                                <span class="sh-dot sh-dot--yellow"></span>
+                                <span class="sh-dot sh-dot--green"></span>
+                            </div>
+                            <img src="assets/projects/snake-sm.webp"
+                                srcset="assets/projects/snake-sm.webp 640w, assets/projects/snake.webp 1280w"
+                                sizes="(max-width: 768px) 90vw, 360px"
+                                alt="Illustrative preview of the Snake game: the snake and its food on a grid board, with the current and high score"
+                                width="1280" height="800" loading="lazy" decoding="async">
+                        </figure>
+                    </div>
+                    <div class="project-content">
+                        <h3>Snake Game</h3>
+                        <p>Classic Snake game with smooth gameplay and responsive controls using HTML5 Canvas.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span
+                                class="tech-tag">JavaScript</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cv" id="cv">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">CV</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">View or download my CV</p>
+            </div>
+            <div class="cv-actions">
+                <a href="new_CV.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>View CV</span>
+                </a>
+                <a href="new_CV.pdf" download class="btn btn-secondary">
+                    <i class="fas fa-download"></i>
+                    <span>Download CV</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">I'd love to hear from you. Send me a message!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p>meetthakkar65006@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <p>+91 9429918950</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Location</h4>
+                            <p>Ahmedabad, Gujarat, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://github.com/meet656" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/meet-thakkar-b9626b313" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:meetthakkar65006@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Your Email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Subject"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-input form-textarea" rows="6"
+                            placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Meet Thakkar. All rights reserved.</p>
+                <p>Designed and developed with <i class="fas fa-heart"></i> by Meet Thakkar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button type="button" class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script src="traffic-marble.js"></script>
+</body>
+
+</html>
